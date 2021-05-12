@@ -20,6 +20,13 @@
   }">
     Object Conditional Movie
   </h3>
+  <p v-bind:style="{
+    color:textColor,
+    fontSize:fSize + 'px',
+    padding:'25px' 
+  }">Styling Text</p>
+  <p v-bind:style="headerStyleObject">Style Object</p>
+  <p v-bind:style="[baseStyleObject, successStyleObject]">Success Style</p>
 </template>
 
 <script>
@@ -37,6 +44,24 @@ export default {
       isdisabled: false,
       ispromoted: true,
       isSoldOut: true,
+      textColor: "orange",
+      fSize : 50,
+      headerStyleObject:{
+        color: 'green',
+        fontSize: '50px',
+        padding:'15px',
+      },
+      baseStyleObject:{
+        color: 'red',
+        fontSize: '50px',
+        padding:'15px',
+      },
+      successStyleObject:{
+        color: 'blue',
+        backgroundColor:'lightgreen',
+        border: '1px solid green',
+        padding: '20px',
+      }
     }
   }
 }
