@@ -5,6 +5,9 @@
   <strong v-text="channel"></strong>
   <p v-html="bindhtml"></p>
   <div v-html="voucher"></div>
+  <br>
+  <p v-bind:id="headingId">Heading</p>
+  <button v-bind:disabled="isdisabled">Click Me</button>
 </template>
 
 <script>
@@ -17,7 +20,9 @@ export default {
       name:"Abhishek",
       channel:'Myblogeater',
       bindhtml:'<i>Binding Html</i>',
-      voucher:'<a href="#" onclick="alert(You got it!)">Grab your voucher</a>',
+      voucher:`<a href="#" onclick="alert('You got it!')">Grab your voucher</a>`,
+      headingId: 'heading',
+      isdisabled: false,
     }
   }
 }
