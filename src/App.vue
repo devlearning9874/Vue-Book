@@ -3,6 +3,8 @@
   <p>Created By:- {{name}}</p>
   <h2>{{greet}} {{name}}</h2>
   <strong v-text="channel"></strong>
+  <p v-html="bindhtml"></p>
+  <div v-html="voucher"></div>
 </template>
 
 <script>
@@ -13,7 +15,9 @@ export default {
     return{
       greet:'Hello',
       name:"Abhishek",
-      channel:'Myblogeater'
+      channel:'Myblogeater',
+      bindhtml:'<i>Binding Html</i>',
+      voucher:'<a href="#" onclick="alert(You got it!)">Grab your voucher</a>',
     }
   }
 }
