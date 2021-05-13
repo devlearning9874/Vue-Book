@@ -35,15 +35,21 @@
   </template>
 
   <!-- component -->
-
+  <Greet name="Wayne" />
+  <Greet name="Clark" />
+  <Greet name="Diana" />
    
 
 </template>
 
 <script>
+ import Greet from './components/Greet.vue'
 
 export default {
   name: 'App',
+  components:{
+    Greet,
+  },
   data(){
     return{
       greet:'Hello',
