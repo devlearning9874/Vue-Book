@@ -38,17 +38,21 @@
   <Greet name="Wayne" />
   <Greet name="Clark" />
   <Greet name="Diana" />
-   
+
+  <!-- HTTP Request -->
+   <PostList />
 
 </template>
 
 <script>
  import Greet from './components/Greet.vue'
+ import PostList from './components/PostList.vue'
 
 export default {
   name: 'App',
   components:{
     Greet,
+    PostList,
   },
   data(){
     return{
