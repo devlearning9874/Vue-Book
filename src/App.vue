@@ -1,4 +1,5 @@
 <template>
+<div v-if="conRender">
   <h1>This is my first vue app.</h1>
   <p>Created By:- {{name}}</p>
   <h2>{{greet}} {{name}}</h2>
@@ -27,6 +28,16 @@
   }">Styling Text</p>
   <p v-bind:style="headerStyleObject">Style Object</p>
   <p v-bind:style="[baseStyleObject, successStyleObject]">Success Style</p>
+  </div>
+  <template v-if="condRender">
+    <h2>This is conditional Rendering - 1</h2>
+    <p v-show="condRender">v-show conditional rendering.</p>
+  </template>
+
+  <!-- component -->
+
+   
+
 </template>
 
 <script>
@@ -61,7 +72,10 @@ export default {
         backgroundColor:'lightgreen',
         border: '1px solid green',
         padding: '20px',
-      }
+      },
+
+      //conditional rendering
+      condRender: true,
     }
   }
 }
